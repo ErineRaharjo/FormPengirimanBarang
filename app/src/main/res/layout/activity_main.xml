@@ -262,7 +262,7 @@
         android:layout_alignParentRight="true"
         android:ems="10"
         android:hint="Masukan Berat Barang (kg)"
-        android:inputType="textPersonName" />
+        android:inputType="numberSigned" />
 
     <TextView
         android:id="@+id/textView4"
@@ -312,7 +312,7 @@
 
     <TextView
         android:id="@+id/textViewNmPeng"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView13"
         android:layout_alignParentEnd="true"
@@ -329,7 +329,7 @@
 
     <TextView
         android:id="@+id/textViewNoPeng"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView13"
         android:layout_alignBottom="@+id/textView13"
@@ -347,7 +347,7 @@
 
     <TextView
         android:id="@+id/textViewNmPen"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView15"
         android:layout_alignParentEnd="true"
@@ -364,7 +364,7 @@
 
     <TextView
         android:id="@+id/textViewNoPen"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -381,7 +381,7 @@
 
     <TextView
         android:id="@+id/textViewAlmt"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView16"
         android:layout_alignParentEnd="true"
@@ -398,7 +398,7 @@
 
     <TextView
         android:id="@+id/textViewKec"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView17"
         android:layout_alignParentEnd="true"
@@ -415,7 +415,7 @@
 
     <TextView
         android:id="@+id/textViewKot"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView19"
         android:layout_alignParentEnd="true"
@@ -432,7 +432,7 @@
 
     <TextView
         android:id="@+id/textViewProv"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView20"
         android:layout_alignParentEnd="true"
@@ -449,7 +449,7 @@
 
     <TextView
         android:id="@+id/textViewPil"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView21"
         android:layout_alignParentEnd="true"
@@ -466,7 +466,7 @@
 
     <TextView
         android:id="@+id/textViewBer"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView22"
         android:layout_alignParentEnd="true"
@@ -483,7 +483,7 @@
 
     <TextView
         android:id="@+id/textViewJb"
-        android:layout_width="400dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView24"
         android:layout_alignParentEnd="true"
