@@ -281,6 +281,7 @@
         android:layout_below="@+id/editTextBrt"
         android:layout_marginLeft="86dp"
         android:layout_marginStart="86dp"
+        android:checked="false"
         android:text="Dokumen" />
 
     <CheckBox

@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         tvAlm = (TextView) findViewById(R.id.textViewAlmt);
         tvBB = (TextView) findViewById(R.id.textViewBer);
         tvPil = (TextView) findViewById(R.id.textViewPil);
+        tvJns = (TextView) findViewById(R.id.textViewJb);
 
         spkec = (Spinner) findViewById(R.id.spinnerKec);
         spKot = (Spinner) findViewById(R.id.spinnerKot);
@@ -82,8 +83,22 @@ public class MainActivity extends AppCompatActivity {
             tvPil.setText("Reg");
         } else if (rbYes.isChecked()) {
             tvPil.setText("Yes");
+        } else {
+            tvPil.setText("Anda Belum Memilih");
         }
+///////////////////////////////////////////////////////////////////
 
+        String jp = "";
+        int startlen = jp.length();
+
+        if (cbDoc.isChecked()) jp += " | " + cbDoc.getText().toString() + " | ";
+        if (cbPkt.isChecked()) jp += " | " + cbPkt.getText().toString() + " | ";
+
+        if (jp.length() == startlen) jp += "Belum Memilih Jenis Barang";
+        tvJns.setText(jp);
+
+
+        /////////////////////////////////////////////////////
 
         String nmpeng = etNmPeng.getText().toString();
         String nopeng = etNoPeng.getText().toString();
@@ -154,8 +169,9 @@ public class MainActivity extends AppCompatActivity {
             tvBB.setText(bb + " Kg");
         }
 
+        ////////////////////////////////////////////////////////////
 
 
-        return valid;
+        return false;
     }
 }
