@@ -299,7 +299,7 @@
         android:layout_alignTop="@+id/textView4"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-        android:text="Button" />
+        android:text="SUBMIT" />
 
     <TextView
         android:id="@+id/textViewjnama"
@@ -363,7 +363,7 @@
         android:text="No Tlpn Penerima" />
 
     <TextView
-        android:id="@+id/textViewNoPen"
+        android:id="@+id/textViewJb"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -380,15 +380,6 @@
         android:text="Alamat Tujuan" />
 
     <TextView
-        android:id="@+id/textViewAlmt"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView16"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
-
-    <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -397,7 +388,7 @@
         android:text="Kecamatan" />
 
     <TextView
-        android:id="@+id/textViewKec"
+        android:id="@+id/textViewAlmt"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView17"
@@ -414,7 +405,7 @@
         android:text="Kota / Kab" />
 
     <TextView
-        android:id="@+id/textViewKot"
+        android:id="@+id/textViewKec"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView19"
@@ -431,7 +422,7 @@
         android:text="Provinsi" />
 
     <TextView
-        android:id="@+id/textViewProv"
+        android:id="@+id/textViewKot"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView20"
@@ -448,15 +439,6 @@
         android:text="Pilihan Pengiriman" />
 
     <TextView
-        android:id="@+id/textViewPil"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView21"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
-
-    <TextView
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -465,7 +447,7 @@
         android:text="Berat Barang" />
 
     <TextView
-        android:id="@+id/textViewBer"
+        android:id="@+id/textViewPil"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView22"
@@ -482,10 +464,29 @@
         android:text="Jenis Barang" />
 
     <TextView
-        android:id="@+id/textViewJb"
+        android:id="@+id/textViewBer"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewProv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView21"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewNoPen"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView15"
+        android:layout_alignBottom="@+id/textView15"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:text="TextView" />
