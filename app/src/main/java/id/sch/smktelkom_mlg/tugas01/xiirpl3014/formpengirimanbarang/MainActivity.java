@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
         bsub = (Button) findViewById(R.id.buttonSub);
 
         tvNmPeng = (TextView) findViewById(R.id.textViewNmPeng);
-        tvNoPeng = (TextView) findViewById(R.id.editTextNoPeng);
+        tvNoPeng = (TextView) findViewById(R.id.textViewNoPeng);
         tvNmPen = (TextView) findViewById(R.id.textViewNmPen);
-        tvNoPen = (TextView) findViewById(R.id.editTextNoPen);
+        tvNoPen = (TextView) findViewById(R.id.textViewNoPen);
         tvAlm = (TextView) findViewById(R.id.textViewAlmt);
         tvBB = (TextView) findViewById(R.id.textViewBer);
         tvPil = (TextView) findViewById(R.id.textViewPil);
@@ -83,6 +83,77 @@ public class MainActivity extends AppCompatActivity {
         } else if (rbYes.isChecked()) {
             tvPil.setText("Yes");
         }
+
+
+        String nmpeng = etNmPeng.getText().toString();
+        String nopeng = etNoPeng.getText().toString();
+        String nmpen = etNmPen.getText().toString();
+        String nopen = etNoPen.getText().toString();
+        String almt = etAlm.getText().toString();
+        String bb = etBB.getText().toString();
+
+        if (nmpeng.isEmpty()) {
+            etNmPeng.setError("Nama Belum Pengirim Diisi");
+            valid = false;
+        } else if (nmpeng.length() < 3) {
+            etNmPeng.setError("Nama Minimal 3 Karakter");
+            valid = false;
+        } else {
+            tvNmPeng.setText(nmpeng);
+        }
+
+        if (nopeng.isEmpty()) {
+            etNoPeng.setError("Nomor Pengirim Diisi");
+            valid = false;
+        } else if (nopeng.length() < 9) {
+            etNoPen.setError("Nama Minimal 9 Digit");
+            valid = false;
+        } else if (nopeng.length() > 12) {
+            etNoPeng.setError("Nama Maksimal 12 Digit");
+            valid = false;
+        } else {
+            tvNoPeng.setText(nopeng);
+        }
+/////////////////////////////////////////////////////////////////
+        if (nmpen.isEmpty()) {
+            etNmPen.setError("Nama Belum Penerima Diisi");
+            valid = false;
+        } else if (nmpen.length() < 3) {
+            etNmPen.setError("Nama Minimal 3 Karakter");
+            valid = false;
+        } else {
+            tvNmPen.setText(nmpen);
+        }
+
+        if (nopen.isEmpty()) {
+            etNoPen.setError("Nomor Pengirim Diisi");
+            valid = false;
+        } else if (nopen.length() < 9) {
+            etNoPen.setError("Nama Minimal 9 Digit");
+            valid = false;
+        } else if (nopen.length() > 12) {
+            etNoPen.setError("Nama Maksimal 12 Digit");
+            valid = false;
+        } else {
+            tvNoPen.setText(nopen);
+        }
+////////////////////////////////////////////////////////////////
+
+        if (almt.isEmpty()) {
+            etAlm.setError("Alamat Belum Diisi");
+            valid = false;
+        } else {
+            tvAlm.setText(almt);
+        }
+
+        ////////////////////////////////////////////////////////////////
+        if (bb.isEmpty()) {
+            etBB.setError("Berat Barang Belum Diisi");
+            valid = false;
+        } else {
+            tvBB.setText(bb + " Kg");
+        }
+
 
 
         return valid;
