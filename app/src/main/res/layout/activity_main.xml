@@ -203,13 +203,6 @@
         android:layout_below="@+id/spinnerProv"
         android:layout_marginTop="15dp" />
 
-    <Spinner
-        android:id="@+id/spinnerKec"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/spinnerKot"
-        android:layout_marginTop="15dp" />
 
     <RadioGroup
         android:id="@+id/radiGroupJenis"
@@ -241,7 +234,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/spinnerKec"
+        android:layout_below="@+id/spinnerKot"
         android:layout_marginTop="17dp"
         android:text="Pilihan Pengiriman" />
 
@@ -304,10 +297,21 @@
         android:text="SUBMIT" />
 
     <TextView
+        android:id="@+id/textVieewdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSub"
+        android:layout_marginTop="20dp"
+        android:text="D A T A  H A S I L"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/textViewjnama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonSub"
+        android:layout_below="@+id/textVieewdata"
         android:layout_marginTop="20dp"
         android:text="Nama Pengirim" />
 
@@ -318,8 +322,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView13"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/textView13"
@@ -342,9 +345,10 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView15"
+        android:layout_alignLeft="@+id/textViewNoPen"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignStart="@+id/textViewNoPen" />
 
     <TextView
         android:id="@+id/textView15"
@@ -359,8 +363,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignParentRight="true" />
 
 
     <TextView
@@ -385,8 +388,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView17"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/textView19"
@@ -402,31 +404,23 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView19"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignParentRight="true" />
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView19"
-        android:layout_marginTop="20dp"
-        android:text="Kecamatan" />
 
     <TextView
         android:id="@+id/textViewKot"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView20"
+        android:layout_above="@+id/textView21"
+
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView20"
+        android:layout_below="@id/textView19"
         android:layout_marginTop="20dp"
         android:text="Pilihan Pengiriman" />
 
@@ -444,8 +438,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView22"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/textView24"
@@ -460,18 +453,10 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView24"
+        android:layout_alignLeft="@+id/textViewJb"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textViewKec"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView21"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignStart="@+id/textViewJb" />
 
     <TextView
         android:id="@+id/textViewNoPen"
@@ -480,8 +465,7 @@
         android:layout_alignBaseline="@+id/textView15"
         android:layout_alignBottom="@+id/textView15"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/textViewNoPeng"
@@ -490,8 +474,7 @@
         android:layout_alignBaseline="@+id/textView13"
         android:layout_alignBottom="@+id/textView13"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_alignParentRight="true" />
 
 
 </RelativeLayout>

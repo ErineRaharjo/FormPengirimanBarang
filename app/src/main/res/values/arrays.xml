@@ -3,7 +3,10 @@
     <string-array name="prov">
         <item>Pilih Provinsi</item>
         <item>Jawa Timur</item>
+        <item>Jawa Tengah</item>
         <item>Jawa Barat</item>
+        <item>DKI</item>
+
 
     </string-array>
 </resources>

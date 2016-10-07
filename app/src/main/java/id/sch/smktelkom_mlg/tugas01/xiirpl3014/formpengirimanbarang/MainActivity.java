@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rbReg, rbYes;
     CheckBox cbPkt, cbDoc;
     Button bsub;
-    TextView tvPil, tvNmPeng, tvNoPeng, tvNmPen, tvNoPen, tvAlm, tvBB, tvJns, tvKot, tvKec, tvProv;
-    Spinner spKot, spkec, spProv;
+    TextView tvPil, tvNmPeng, tvNoPeng, tvNmPen, tvNoPen, tvAlm, tvBB, tvJns, tvKot, tvProv;
+    Spinner spKot, spProv;
 
-    String[][] arKota = {{" "}, {"Surabaya", "Kediri"}, {"Bandung", "Cirebon"}};
+    String[][] arKota = {{" "}, {"Surabaya", "Kediri", "Jombang", "Malang", "Blitar"}, {"Solo", "Semarang", "Kudus"}, {"Bandung", "Cirebon", "Cilacap"},
+            {"JakTim"}, {"JakUt"}, {"JakBar"}, {"JakPus"}};
     ArrayList<String> listKota = new ArrayList<>();
     ArrayAdapter<String> adapter;
 
@@ -62,9 +63,7 @@ public class MainActivity extends AppCompatActivity {
         tvJns = (TextView) findViewById(R.id.textViewJb);
         tvProv = (TextView) findViewById(R.id.textViewProv);
         tvKot = (TextView) findViewById(R.id.textViewKot);
-        tvKec = (TextView) findViewById(R.id.textViewKec);
 
-        spkec = (Spinner) findViewById(R.id.spinnerKec);
         spKot = (Spinner) findViewById(R.id.spinnerKot);
         spProv = (Spinner) findViewById(R.id.spinnerProv);
 
@@ -85,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
+
+
         });
 
         bsub.setOnClickListener(new View.OnClickListener() {
