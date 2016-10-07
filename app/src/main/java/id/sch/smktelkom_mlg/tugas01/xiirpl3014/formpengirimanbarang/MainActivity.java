@@ -3,6 +3,8 @@ package id.sch.smktelkom_mlg.tugas01.xiirpl3014.formpengirimanbarang;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -11,6 +13,9 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText etNmPeng, etNoPeng, etNmPen, etNoPen, etBB, etAlm;
@@ -18,9 +23,12 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rbReg, rbYes;
     CheckBox cbPkt, cbDoc;
     Button bsub;
-    TextView tvPil, tvNmPeng, tvNoPeng, tvNmPen, tvNoPen, tvAlm, tvBB, tvJns;
+    TextView tvPil, tvNmPeng, tvNoPeng, tvNmPen, tvNoPen, tvAlm, tvBB, tvJns, tvKot, tvKec, tvProv;
     Spinner spKot, spkec, spProv;
 
+    String[][] arKota = {{" "}, {"Surabaya", "Kediri"}, {"Bandung", "Cirebon"}};
+    ArrayList<String> listKota = new ArrayList<>();
+    ArrayAdapter<String> adapter;
 
 
     @Override
@@ -52,10 +60,32 @@ public class MainActivity extends AppCompatActivity {
         tvBB = (TextView) findViewById(R.id.textViewBer);
         tvPil = (TextView) findViewById(R.id.textViewPil);
         tvJns = (TextView) findViewById(R.id.textViewJb);
+        tvProv = (TextView) findViewById(R.id.textViewProv);
+        tvKot = (TextView) findViewById(R.id.textViewKot);
+        tvKec = (TextView) findViewById(R.id.textViewKec);
 
         spkec = (Spinner) findViewById(R.id.spinnerKec);
         spKot = (Spinner) findViewById(R.id.spinnerKot);
         spProv = (Spinner) findViewById(R.id.spinnerProv);
+
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, listKota);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spKot.setAdapter(adapter);
+
+        spProv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                listKota.clear();
+                listKota.addAll(Arrays.asList(arKota[pos]));
+                adapter.notifyDataSetChanged();
+                spKot.setSelection(0);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         bsub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +200,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         ////////////////////////////////////////////////////////////
+
+
+        tvProv.setText(spProv.getSelectedItem().toString());
+        tvKot.setText(spKot.getSelectedItem().toString());
 
 
         return false;
